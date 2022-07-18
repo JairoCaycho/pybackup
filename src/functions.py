@@ -4,6 +4,12 @@ from datetime import date
 import zipfile
 from pathlib import Path
 
+
+def check_path(list_of_coins):
+    if not os.path.exists(BACKUP_ARCHIVE_PATH):
+        os.makedirs(BACKUP_ARCHIVE_PATH)
+        print('Created directory: {BACKUP_ARCHIVE_PATH}')
+
 def backup_management():
     bu_path = Path(BACKUP_FOLDER_PATH)
     to_bu = Path(FOLDER_PATH)
